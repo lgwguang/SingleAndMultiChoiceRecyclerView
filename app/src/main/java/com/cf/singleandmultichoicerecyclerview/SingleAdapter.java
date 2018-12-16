@@ -9,13 +9,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * 描    述：
- * 创建日期：2017/7/17 16:01
- * 作    者：Chengfu
- * 邮    箱：
- * 备    注：
- */
 public class SingleAdapter extends RecyclerView.Adapter {
 
     private List<String> datas;
@@ -27,8 +20,7 @@ public class SingleAdapter extends RecyclerView.Adapter {
 
     private OnItemClickLitener mOnItemClickLitener;
 
-    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener)
-    {
+    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener){
         this.mOnItemClickLitener = mOnItemClickLitener;
     }
 
@@ -59,13 +51,10 @@ public class SingleAdapter extends RecyclerView.Adapter {
                 viewHolder.itemView.setSelected(false);
             }
 
-            if (mOnItemClickLitener != null)
-            {
-                viewHolder.itemView.setOnClickListener(new View.OnClickListener()
-                {
+            if (mOnItemClickLitener != null){
+                viewHolder.itemView.setOnClickListener(new View.OnClickListener(){
                     @Override
-                    public void onClick(View v)
-                    {
+                    public void onClick(View v){
                         mOnItemClickLitener.onItemClick(viewHolder.itemView, viewHolder.getAdapterPosition());
                     }
                 });

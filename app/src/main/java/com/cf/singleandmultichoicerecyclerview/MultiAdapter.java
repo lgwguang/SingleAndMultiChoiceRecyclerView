@@ -10,13 +10,6 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * 描    述：
- * 创建日期：2017/7/17 16:01
- * 作    者：Chengfu
- * 邮    箱：
- * 备    注：
- */
 public class MultiAdapter extends RecyclerView.Adapter {
 
     private List<String> datas;
@@ -37,8 +30,7 @@ public class MultiAdapter extends RecyclerView.Adapter {
 
     private OnItemClickLitener mOnItemClickLitener;
 
-    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener)
-    {
+    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener){
         this.mOnItemClickLitener = mOnItemClickLitener;
     }
 
@@ -58,8 +50,7 @@ public class MultiAdapter extends RecyclerView.Adapter {
                 viewHolder.mCheckBox.setChecked(isSelected.get(position));
                 viewHolder.itemView.setSelected(isSelected.get(position));
 
-                if (mOnItemClickLitener != null)
-                {
+                if (mOnItemClickLitener != null){
                     viewHolder.itemView.setOnClickListener(new View.OnClickListener()
                     {
                         @Override
